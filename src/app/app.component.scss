@@ -1,0 +1,39 @@
+//colors
+$color_mountain_mist_approx: #999;
+$color_gallery_approx: #eee;
+$color_smalt_blue_approx: #607d8b;
+$color_cerulean_approx: #039be5;
+$color_iron_approx: #cfd8dc;
+
+h1 {
+	font-size: 1.2em;
+	color: $color_mountain_mist_approx;
+	margin-bottom: 0;
+}
+h2 {
+	font-size: 2em;
+	margin-top: 0;
+	padding-top: 0;
+}
+nav a {
+	padding: 5px 10px;
+	text-decoration: none;
+	margin-top: 10px;
+	display: inline-block;
+	background-color: $color_gallery_approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 4px;
+	&:visited {
+		color: $color_smalt_blue_approx;
+	}
+	&:hover {
+		color: $color_cerulean_approx;
+		background-color: $color_iron_approx;
+	}
+	&.active {
+		color: $color_cerulean_approx;
+	}
+}
+a:link {
+	color: $color_smalt_blue_approx;	
+}

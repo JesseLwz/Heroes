@@ -1,0 +1,67 @@
+//colors
+$color_iron_approx: #cfd8dc;
+$white: white;
+$color_gallery_approx: #eee;
+$color_ziggurat_approx: #bbd8dc;
+$color_smalt_blue_approx: #607d8b;
+$color_alto_approx: #ddd;
+$gray: gray;
+$white: white;
+
+.selected {
+	background-color: $color_iron_approx !important;
+	color: $white;
+}
+.heroes {
+	margin: 0 0 2em 0;
+	list-style-type: none;
+	padding: 0;
+	width: 15em;
+	li {
+		cursor: pointer;
+		position: relative;
+		left: 0;
+		background-color: $color_gallery_approx;
+		margin: .5em;
+		padding: .3em 0;
+		height: 1.6em;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px;
+		&:hover {
+			color: $color_smalt_blue_approx;
+			background-color: $color_alto_approx;
+			left: .1em;
+		}
+		&.selected:hover {
+			background-color: $color_ziggurat_approx !important;
+			color: $white;
+		}
+	}
+	.text {
+		position: relative;
+		top: -3px;
+	}
+	.badge {
+		display: inline-block;
+		font-size: small;
+		color: $white;
+		padding: 0.8em 0.7em 0 0.7em;
+		background-color: $color_smalt_blue_approx;
+		line-height: 1em;
+		position: relative;
+		left: -1px;
+		top: -4px;
+		height: 1.8em;
+		margin-right: .8em;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 4px 0 0 4px;
+	}
+}
+
+button.delete {
+	float: right;
+	margin-top: 2px;
+	margin-right: .8em;
+	background-color: $gray !important;
+	color: $white;
+}
